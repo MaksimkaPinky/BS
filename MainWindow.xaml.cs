@@ -20,6 +20,8 @@ namespace BS
     /// </summary>
     public partial class MainWindow : Window
     {
+        Model1 db = new Model1();
+        Пользователи USER { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -28,7 +30,35 @@ namespace BS
         public static MainWindow AUTOR { get; set; }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            if (TBLog.Text == "" || TBPass.Text == "")
+            {
+                MessageBox.Show("Заполните поля");
+                return;
+            }
+            Пользователи usr = db.Пользователи.Find(TBLog.Text);
+            if ((usr != null) && (usr.Пароль == TBPass.Text))
+            {
+                USER = usr;
+                AUTOR = this;
+            }
+            if(usr.Роль=="Администратор")
+            {
+                Window2 ADM = new Window2();
+                ADM.Show();
+                this.Hide();
+            }
+            if (usr.Роль == "Менеджер")
+            {
+                Window3 MAN = new Window3();
+                MAN.Show();
+                this.Hide();
+            }
+            if (usr.Роль == "Пользователь")
+            {
+                Window4 USE = new Window4();
+                USE.Show();
+                this.Hide();
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
