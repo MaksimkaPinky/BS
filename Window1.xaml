@@ -1,0 +1,42 @@
+﻿<Window x:Class="BS.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BS"
+        mc:Ignorable="d"
+        Title="Window1" Height="600" Width="800">
+    <Grid  x:Name= "Registr" Background="Aqua" HorizontalAlignment="Left" Width="790" Margin="0,0,0,2">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="132*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Регистрация" Grid.ColumnSpan="2" x:Name="TXTAutoriz" FontSize="50" Margin="226,0,160.639,0" />
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Логин" x:Name="TXTLog" FontSize="30"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Пароль" x:Name="TXTPassword" FontSize="30"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Повторите пароль" x:Name="TXTPassword1" FontSize="30"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Имя" x:Name="TXTName" FontSize="30"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Роль" x:Name="TXTRole" FontSize="30"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="TBLog" Margin="0,10,0,26" FontSize="24"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="TBPass" Margin="0,10,0,26" FontSize="24"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="TBPass1" Margin="0,10,0,26" FontSize="24"/>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="TBName" Margin="0,10,0,26" FontSize="24"/>
+        <ComboBox Grid.Row="5" x:Name="CBRole" Margin="10,10,0,23" SelectionChanged="CBRole_SelectionChanged" Grid.Column="1">
+            <TextBlock FontSize="20">Менеджер</TextBlock>
+            <TextBlock FontSize="20">Администратор</TextBlock>
+            <TextBlock FontSize="20">Пользователь</TextBlock>
+        </ComboBox>
+        <Button Grid.Row="6" Grid.Column="1" FontSize="30" Margin="78,18,69,10" Background="Wheat" Click="Button_Click_1">Закрыть</Button>
+        <Button Grid.Row="6" FontSize="30" Margin="78,18,69,10" Background="Wheat" Click="Button_Click" >Регистрация</Button>
+    </Grid>
+</Window>

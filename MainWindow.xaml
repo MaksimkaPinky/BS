@@ -1,0 +1,33 @@
+﻿<Window x:Class="BS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BS"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStyle="None">
+    <Grid x:Name= "Autoriz" Background="Aqua" HorizontalAlignment="Left" Width="790" Margin="0,0,0,2">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="132*"/>
+            <ColumnDefinition Width="132*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Авторизация" Grid.ColumnSpan="2" x:Name="TXTAutoriz" FontSize="50" Margin="226,0,160.639,0" />
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Логин" x:Name="TXTLog" FontSize="50"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Пароль" x:Name="TXTPassword" FontSize="50"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="TBLog" Margin="0,26,0,38" FontSize="24"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="TBPass" Margin="0,26,0,38" FontSize="24"/>
+        <Button Grid.Row="3" Grid.Column="0" FontSize="40" Margin="72,18,75,19" Background="Wheat" Click="Button_Click">Войти</Button>
+        <Button Grid.Row="3" Grid.Column="1" FontSize="40" Margin="78,18,69,19" Background="Wheat" Click="Button_Click_1">Регистрация</Button>
+        <Button Grid.Row="0" Grid.Column="1" FontSize="40" Margin="320,10,24,61" Background="White" Click="Button_Click" RenderTransformOrigin="0.092,0.555">
+            <Grid Margin="0">
+                <Image Source="Resources/Закрыть.jpg" HorizontalAlignment="Left" Width="50" Margin="0,-20,-3,-21"/>
+            </Grid>
+        </Button>
+    </Grid>
+</Window>
